@@ -1,0 +1,264 @@
+*
+    margin: 0
+    padding: 0
+    box-shadow: border-box
+
+html, body
+    height: 100%
+    width: 100%
+
+/* MENU */
+.header-container     
+    width: 100%
+    height: 50px
+    background-color: rgba(0,0,0)
+    color: white
+    display: flex
+    flex-direction: row 
+
+    @media (max-width: 768px)
+        display: none
+
+    .header-item       
+        height: 100%     
+        border: 1px solid rgba(255,255,255, 0.1)
+        color: #fff        
+        text-transform: uppercase
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+
+        &:hover
+            cursor: pointer
+            background-color: rgba(255,255,255)
+            border-left: 1px solid rgba(0,0,0, 0.7)
+            color: rgba(0,0,0,0.8)
+
+    .header-item-1    
+        display: flex
+        flex-direction: row    
+        flex-grow: 12
+    .header-item-2       
+        flex-grow: 1
+    .header-item-3
+        flex-grow: 1
+    .header-item-4
+        flex-grow: 1
+
+/* MENU MOBILE */
+
+.header-mobile-container  
+    display: none
+
+    @media (max-width: 768px)
+        width: 100%
+        height: 50px
+        background-color: rgba(0,0,0)
+        color: white
+        display: flex
+        flex-direction: row 
+        justify-content: flex-end
+    
+    .header-mobile-image    
+        display: flex
+        flex-direction: row    
+        flex-grow: 12
+
+    .header-mobile-menu
+        background-color: rgba(0,0,0, 0.8)        
+        width: 50%
+        height: 200px
+        margin-top: 50px
+        color: #fff        
+        text-transform: uppercase
+        display: none          
+        flex-direction: column  
+        float: left   
+
+        .header-mobile-menu-item       
+            border: 1px solid rgba(255,255,255, 0.1)
+            display: flex
+            justify-content: center
+            align-items: center   
+            position: relative
+
+            &:hover
+                cursor: pointer
+                background-color: rgba(255,255,255)
+                border: 1px solid rgba(0,0,0, 0.7)
+                color: rgba(0,0,0,0.8)        
+
+    .header-mobile-menu-hamburguer     
+        border: 1px solid rgba(255,255,255, 1)    
+        padding: 5px    
+        flex-grow: 1
+        top: 15px  
+        right: 20px    
+        display: flex
+        justify-content: flex-end
+        align-items: center 
+        position: absolute
+
+        &:hover ~ .header-mobile-menu
+            display: flex
+
+
+    .header-mobile-menu-1             
+        flex-grow: 1
+    .header-mobile-menu-2
+        flex-grow: 1
+    .header-mobile-menu-3
+        flex-grow: 1 
+
+
+/* BANNER */
+.banner-container
+    width: 100%
+    height: 100vh
+    display: flex
+    flex-direction: row    
+    background-image: url('../img/image-cool.jpg')
+    background-position: center
+    background-size: cover
+
+    .banner-container-item
+        flex-grow: 1
+        height: 100%
+        background-color: rgba(0,0,0, 0.3)
+        display: flex
+        justify-content: center
+        align-items: center
+
+        h1
+            color: white
+            font-size: 5em
+
+            @media (max-width: 768px)      
+                font-size: 2em
+
+.about-container
+    background-color: rgba(100,149,237,1)
+    color: rgba(255,255,255)
+    width: 100%
+    height: 30vh
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+    @media (max-width: 768px)
+       height: 70vh
+
+    .about-container-item
+        width: 60%
+
+        @media (max-width: 768px)
+            width: 80%
+
+        h1
+            font-size: 2em
+        p
+            margin-top: 7px
+            font-size: 1.2em            
+
+.services-container    
+    width: 100%
+    display: flex
+    flex-direction: column
+
+    @media (max-width: 768px)
+        margin-top: 30px
+
+    .services-container-item
+        flex-grow: 1
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+
+        @media (max-width: 768px) 
+            flex-direction: column
+
+        .services-container-item-text
+            width: 100%
+
+            h3
+                padding: 0 20px
+
+        .services-container-item-text-2
+            order: 2
+
+            @media (max-width: 768px) 
+                order: 0
+
+        .services-container-item-img
+            width: 100%
+            height: 550px            
+            background-position: center
+            background-size: cover    
+
+    .services-container-item:nth-child(1)
+        .services-container-item-img
+            background-image: url('../img/pokemon.png')
+
+    .services-container-item:nth-child(2)
+        .services-container-item-img
+            background-image: url('../img/summer.jpg')
+    
+    .services-container-item:nth-child(3)
+        .services-container-item-img
+            background-image: url('../img/lago-louise.jpg')
+
+.message-container 
+    height: 100vh
+    background-color: rgba(100,149,237)
+    color: white
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+    .message-container-item
+        width: 60%        
+
+.footer-container    
+    height: 30vh
+    background-color: rgba(0,0,0,1)
+    color: rgba(255,255,255)
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+
+    @media (max-width: 768px)
+        flex-direction: column
+        height: 80vh
+    
+    .footer-container-item  
+        
+        img
+            width: 400px
+
+            @media (max-width: 768px)
+                width: 280px
+
+        h4
+            text-transform: uppercase
+            margin-bottom: 5px
+
+        p
+            &:hover
+                cursor: pointer
+                color: rgba(100,149,237)
+
+.copyright-container  
+    width: 100%  
+    height: 60px
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+    .copyright-container-item
+        text-align: center  
